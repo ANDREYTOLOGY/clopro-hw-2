@@ -1,0 +1,19 @@
+#cloud-config
+
+write_files:
+  - path: /var/www/html/index.html
+    permissions: "0644"
+    content: |
+      <html>
+      <head>
+          <title>Netology Terraform</title>
+      </head>
+      <body>
+          <h1>Instance Group</h1>
+          <p>Homework 15.2</p>
+          <img src="${logo_url}" width="500">
+      </body>
+      </html>
+
+runcmd:
+  - systemctl restart apache2
