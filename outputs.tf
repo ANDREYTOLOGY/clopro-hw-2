@@ -16,6 +16,6 @@ output "logo_url" {
 
 }
 
-#output "load_balancer_ip" {
-#  value = yandex_lb_network_load_balancer.lamp_nlb.listener[0].external_address_spec[0].address
-#}
+output "kms_key_id" {
+  value = yandex_kms_symmetric_key.bucket_key.id
+}
